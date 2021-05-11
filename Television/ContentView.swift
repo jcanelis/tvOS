@@ -30,11 +30,13 @@ struct ContentView: View {
                 
                 HStack {
                     Image(systemName: "clock.fill")
+                    
                     Spacer()
+                    
                     Toggle("Toggle something", isOn: $isShowing)
                     
-
                     Spacer()
+                    
                     Button("Get started") {
                         print("Press chicken button")
                     }
@@ -43,10 +45,13 @@ struct ContentView: View {
                 Spacer()
                 
                 HStack {
+                    
                     Button("Show action sheet") {
                         showActionSheet = true
                     }
+                    
                     Spacer()
+                    
                     Button("Wow fun!") {
                         print("Wow fun!")
                     }

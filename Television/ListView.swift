@@ -19,7 +19,9 @@ struct ListView: View {
                 Text("First View")
                     .font(.title)
             }
-            .tabItem({ Text("First") })
+            .tabItem {
+                Label("Featured", systemImage: "star")
+            }
             .tag(0)
             
             VStack {
