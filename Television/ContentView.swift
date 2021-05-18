@@ -81,7 +81,6 @@ struct ContentView: View {
                             Image(systemName: "play.rectangle")
                             Text("\(product.title!)")
                         }
-                        .padding(.all, 8.0)
                     }
                 }
                 .onAppear {
@@ -91,12 +90,11 @@ struct ContentView: View {
                 VStack {
                     ScrollView(.horizontal) {
                         LazyHStack {
-                            ForEach(0..<5) { row in
-                                NavigationLink(destination: ListView()) {
-                                    Image("giants")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 400, height: 600)
+                            ForEach(products.products) { product in
+                                NavigationLink(destination: ListView(item: product)) {
+                                    URLImage(url: product.photos![0].url!)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                        .animation(.linear)
                                 }
                             }
                         }

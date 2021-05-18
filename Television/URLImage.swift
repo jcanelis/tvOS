@@ -27,10 +27,3 @@ struct URLImage: View {
         }
     }
 }
-
-
-//struct URLImage_Previews: PreviewProvider {
-//    static var previews: some View {
-//        URLImage()
-//    }
-//}

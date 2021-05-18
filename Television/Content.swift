@@ -27,7 +27,7 @@ final class Product: EntryDecodable, FieldKeysQueryable, Identifiable {
     let updatedAt: Date?
     let createdAt: Date?
     
-    // var photos: Array<Link>?
+    var photos: Array<Asset>?
     var mainPhoto: Asset?
     let title: String?
     let description: String?
@@ -48,9 +48,13 @@ final class Product: EntryDecodable, FieldKeysQueryable, Identifiable {
         try fields.resolveLink(forKey: .mainPhoto, decoder: decoder) { [weak self] image in
             self?.mainPhoto = image as? Asset
         }
+        
+        try fields.resolveLinksArray(forKey: .photos, decoder: decoder) { [weak self] array in
+            self?.photos = array as? Array<Asset>
+        }
     }
     
     enum FieldKeys: String, CodingKey {
-        case mainPhoto, title, price, description
+        case photos, mainPhoto, title, price, description
     }
 }

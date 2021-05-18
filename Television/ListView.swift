@@ -8,39 +8,21 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    var item: Product!
+    
+    init(item: Product) {
+        self.item = item
+    }
+    
     var body: some View {
         TabView {
-            
-            VStack {
-                Image("giants")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 400, height: 600)
-                Text("First View")
-                    .font(.title)
+            ForEach(item.photos!, id: \.self) { photo in
+                URLImage(url: photo.url!)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .animation(.linear)
+                    .tabItem({ Text(photo.title!) })
             }
-            .tabItem {
-                Label("Featured", systemImage: "star")
-            }
-            .tag(0)
-            
-            VStack {
-                Image("giants")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 400, height: 600)
-                Text("Second View")
-                    .font(.title)
-            }
-            .tabItem({ Text("Second") })
-            .tag(1)
-            
         }
-    }
-}
-
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
     }
 }
