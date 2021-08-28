@@ -18,10 +18,14 @@ struct ListView: View {
     var body: some View {
         TabView {
             ForEach(item.photos!, id: \.self) { photo in
-                URLImage(url: photo.url!)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .animation(.linear)
-                    .tabItem({ Text(photo.title!) })
+                AsyncImage(url: photo.url!) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } placeholder: {
+                    Color.gray
+                }
+                .tabItem({ Text(photo.title!) })
             }
         }
     }

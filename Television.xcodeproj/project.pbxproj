@@ -13,8 +13,6 @@
 		0B59589F2648F925008BEF6E /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B59589E2648F925008BEF6E /* Content.swift */; };
 		0B5958A12648F998008BEF6E /* GetProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5958A02648F998008BEF6E /* GetProducts.swift */; };
 		0B5958A32648FA2F008BEF6E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5958A22648FA2F008BEF6E /* DetailView.swift */; };
-		0B5958A72648FA77008BEF6E /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5958A62648FA77008BEF6E /* URLImage.swift */; };
-		0B5958A92648FA9A008BEF6E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5958A82648FA9A008BEF6E /* ImageLoader.swift */; };
 		0B9049A9262CDBFB00C05EDD /* TelevisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9049A8262CDBFB00C05EDD /* TelevisionApp.swift */; };
 		0B9049AB262CDBFB00C05EDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9049AA262CDBFB00C05EDD /* ContentView.swift */; };
 		0B9049AD262CDBFC00C05EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9049AC262CDBFC00C05EDD /* Assets.xcassets */; };
@@ -46,8 +44,6 @@
 		0B59589E2648F925008BEF6E /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		0B5958A02648F998008BEF6E /* GetProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProducts.swift; sourceTree = "<group>"; };
 		0B5958A22648FA2F008BEF6E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		0B5958A62648FA77008BEF6E /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
-		0B5958A82648FA9A008BEF6E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		0B9049A5262CDBFB00C05EDD /* Television.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Television.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9049A8262CDBFB00C05EDD /* TelevisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelevisionApp.swift; sourceTree = "<group>"; };
 		0B9049AA262CDBFB00C05EDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,8 +112,6 @@
 				0B9049A8262CDBFB00C05EDD /* TelevisionApp.swift */,
 				0B9049AA262CDBFB00C05EDD /* ContentView.swift */,
 				0B5958A22648FA2F008BEF6E /* DetailView.swift */,
-				0B5958A62648FA77008BEF6E /* URLImage.swift */,
-				0B5958A82648FA9A008BEF6E /* ImageLoader.swift */,
 				0B5958992648F66B008BEF6E /* RandomView.swift */,
 				0B57C9B4262FBE8C004759E7 /* ListView.swift */,
 				0B9049AC262CDBFC00C05EDD /* Assets.xcassets */,
@@ -293,10 +287,8 @@
 				0B9049A9262CDBFB00C05EDD /* TelevisionApp.swift in Sources */,
 				0B5958A32648FA2F008BEF6E /* DetailView.swift in Sources */,
 				0B57C9B5262FBE8C004759E7 /* ListView.swift in Sources */,
-				0B5958A92648FA9A008BEF6E /* ImageLoader.swift in Sources */,
 				0B59589F2648F925008BEF6E /* Content.swift in Sources */,
 				0B59589A2648F66B008BEF6E /* RandomView.swift in Sources */,
-				0B5958A72648FA77008BEF6E /* URLImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Television/Preview Content\"";
 				DEVELOPMENT_TEAM = 7EYVSUVBD6;
 				ENABLE_PREVIEWS = YES;
@@ -464,12 +456,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johncanelis.TrackQueen2021;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 14.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Debug;
 		};
@@ -480,7 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Television/Preview Content\"";
 				DEVELOPMENT_TEAM = 7EYVSUVBD6;
 				ENABLE_PREVIEWS = YES;
@@ -489,12 +482,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.johncanelis.TrackQueen2021;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 14.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Release;
 		};
@@ -516,7 +510,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Television.app/Television";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Debug;
 		};
@@ -538,7 +532,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Television.app/Television";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Release;
 		};

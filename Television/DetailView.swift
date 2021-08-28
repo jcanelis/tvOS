@@ -20,13 +20,15 @@ struct DetailView: View {
         TabView {
             ForEach(item.photos!, id: \.self) { photo in
                 HStack {
-                    
                     VStack {
-                        URLImage(url: photo.url!)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .animation(.linear)
+                        AsyncImage(url: photo.url!) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            Color.gray
+                        }
                     }
-                    
                     VStack {
                         Text("\(item.price!)")
                             .font(.largeTitle)

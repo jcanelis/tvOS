@@ -23,14 +23,11 @@ struct ContentView: View {
     @StateObject var products = GetProducts()
     
     var body: some View {
-        
         NavigationView {
-            
             VStack {
-                
                 HStack {
                     Image(systemName: "clock.fill")
-                    
+
                     Spacer()
                     
                     Toggle("Toggle something", isOn: $isShowing)
@@ -45,7 +42,6 @@ struct ContentView: View {
                 Spacer()
                 
                 HStack {
-                    
                     Button("Show action sheet") {
                         showActionSheet = true
                     }
@@ -92,9 +88,14 @@ struct ContentView: View {
                         LazyHStack {
                             ForEach(products.products) { product in
                                 NavigationLink(destination: ListView(item: product)) {
-                                    URLImage(url: product.photos![0].url!)
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                        .animation(.linear)
+                                    AsyncImage(url: product.photos![0].url!) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                    } placeholder: {
+                                        Color.gray
+                                    }
+                                    .frame(width: 400)
                                 }
                             }
                         }

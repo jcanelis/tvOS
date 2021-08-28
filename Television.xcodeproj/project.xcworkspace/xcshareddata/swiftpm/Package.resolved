@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/contentful/contentful.swift",
         "state": {
           "branch": null,
-          "revision": "69f364a7a9cb00b99198bf39f1893874104c8505",
-          "version": "5.5.0"
+          "revision": "265a67e67fb3a722f73bd298f0879f3878528ca8",
+          "version": "5.5.1"
         }
       }
     ]
